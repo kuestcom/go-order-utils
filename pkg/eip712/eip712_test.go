@@ -11,7 +11,7 @@ import (
 )
 
 func TestBuildEIP712DomainSeparator(t *testing.T) {
-	expectedAmoy := common.HexToHash("0x029ca49b31e01a0230787b3673a6977ee0dbb02f78e68d2ee41d330893e17594")
+	expectedAmoy := common.HexToHash("0x6b19e618edbcb3dff6263b5e2ff88e1bf35df68b801a7da3825c87e14d7ed8bc")
 	name := crypto.Keccak256Hash([]byte("Kuest CTF Exchange"))
 	version := crypto.Keccak256Hash([]byte("1"))
 	chainId := big.NewInt(80002)
@@ -22,7 +22,7 @@ func TestBuildEIP712DomainSeparator(t *testing.T) {
 	assert.NotEmpty(t, actual)
 	assert.Equal(t, expectedAmoy.String(), actual.String())
 
-	expectedPolygon := common.HexToHash("0ba60c2a4504ef46ef2d139f27cd131dbc8b9643d0565a54bb14de0e31cd5600")
+	expectedPolygon := common.HexToHash("5387ff527161b318d38cceea7c9048368070f42aec88d28ca137a6e85adab706")
 	chainId = big.NewInt(137)
 
 	actual, err = BuildEIP712DomainSeparator(name, version, chainId, address)
@@ -34,7 +34,7 @@ func TestBuildEIP712DomainSeparator(t *testing.T) {
 
 func TestBuildEIP712DomainSeparatorNoContract(t *testing.T) {
 	// Calculated in foundry
-	expectedAmoy := common.HexToHash("0xf231a704e0942ea4f4f4a68a19fa01e198ddae4595d821697230159c60e562b0")
+	expectedAmoy := common.HexToHash("0x99a2c264407aa721c2e5de6d3013e84caa68838ede505e61986d1e7e7c8b7a8b")
 	chainId := big.NewInt(80002)
 
 	name := crypto.Keccak256Hash([]byte("Kuest CTF Exchange"))
@@ -46,7 +46,7 @@ func TestBuildEIP712DomainSeparatorNoContract(t *testing.T) {
 	assert.Equal(t, expectedAmoy.String(), actual.String())
 
 	// Calculated in foundry
-	expectedPolygon := common.HexToHash("aee1d7dd93bb10f6c6a59417017905bc5dbec7ddbd71475cd19d8a95845e632d")
+	expectedPolygon := common.HexToHash("0a007ad5fc0a840753026d60eab9679d79a245a7ebc45a2ac5eea6f7fe2b2ab6")
 	chainId = big.NewInt(137)
 
 	actual, err = BuildEIP712DomainSeparatorNoContract(name, version, chainId)
