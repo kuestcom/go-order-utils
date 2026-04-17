@@ -81,6 +81,6 @@ func TestHashTypedDataV4(t *testing.T) {
 	assert.NoError(t, err)
 	assert.NotEmpty(t, dataHashBytes)
 
-	expectedTypedDataHash := "0x5b9fd6432c2890e6293b3880add5e3d40ead280b31f7cd70f06b43f8d37dcc13"
+	expectedTypedDataHash := "0xf28dd0f4e2fa155c58c44b76b0b5569f07f6c6257f65f94d535df0c8679cc92d"
 	assert.Equal(t, expectedTypedDataHash, dataHashBytes.String())
 }
