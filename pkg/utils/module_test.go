@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/polymarket/go-order-utils/pkg/model"
+	"github.com/kuestcom/go-order-utils/pkg/model"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -3,7 +3,7 @@ package builder
 import (
 	"crypto/ecdsa"
 
-	"github.com/polymarket/go-order-utils/pkg/model"
+	"github.com/kuestcom/go-order-utils/pkg/model"
 )
 
 //go:generate mockery --name ExchangeOrderBuilder

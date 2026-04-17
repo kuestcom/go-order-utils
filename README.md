@@ -1,6 +1,6 @@
 # go-order-utils
 
-Golang utilities used to generate and sign orders from Polymarket's CTFExchange
+Golang utilities used to generate and sign orders from Kuest's CTFExchange
 
 ## Contributions
 

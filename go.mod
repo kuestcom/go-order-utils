@@ -1,4 +1,4 @@
-module github.com/polymarket/go-order-utils
+module github.com/kuestcom/go-order-utils
 
 go 1.21
 

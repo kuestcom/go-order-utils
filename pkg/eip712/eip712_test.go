@@ -12,7 +12,7 @@ import (
 
 func TestBuildEIP712DomainSeparator(t *testing.T) {
 	expectedAmoy := common.HexToHash("0x029ca49b31e01a0230787b3673a6977ee0dbb02f78e68d2ee41d330893e17594")
-	name := crypto.Keccak256Hash([]byte("Polymarket CTF Exchange"))
+	name := crypto.Keccak256Hash([]byte("Kuest CTF Exchange"))
 	version := crypto.Keccak256Hash([]byte("1"))
 	chainId := big.NewInt(80002)
 	address := common.HexToAddress("0x0000000000000000000000000000000000000000")
@@ -37,7 +37,7 @@ func TestBuildEIP712DomainSeparatorNoContract(t *testing.T) {
 	expectedAmoy := common.HexToHash("0xf231a704e0942ea4f4f4a68a19fa01e198ddae4595d821697230159c60e562b0")
 	chainId := big.NewInt(80002)
 
-	name := crypto.Keccak256Hash([]byte("Polymarket CTF Exchange"))
+	name := crypto.Keccak256Hash([]byte("Kuest CTF Exchange"))
 	version := crypto.Keccak256Hash([]byte("1"))
 
 	actual, err := BuildEIP712DomainSeparatorNoContract(name, version, chainId)
@@ -57,7 +57,7 @@ func TestBuildEIP712DomainSeparatorNoContract(t *testing.T) {
 }
 
 func TestHashTypedDataV4(t *testing.T) {
-	name := crypto.Keccak256Hash([]byte("Polymarket CTF Exchange"))
+	name := crypto.Keccak256Hash([]byte("Kuest CTF Exchange"))
 	version := crypto.Keccak256Hash([]byte("1"))
 	chainId := big.NewInt(80002)
 	address := common.HexToAddress("0x0000000000000000000000000000000000000000")

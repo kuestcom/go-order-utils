@@ -3,11 +3,11 @@ package builder
 import (
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/polymarket/go-order-utils/pkg/eip712"
+	"github.com/kuestcom/go-order-utils/pkg/eip712"
 )
 
 var (
-	_PROTOCOL_NAME    = crypto.Keccak256Hash([]byte("Polymarket CTF Exchange"))
+	_PROTOCOL_NAME    = crypto.Keccak256Hash([]byte("Kuest CTF Exchange"))
 	_PROTOCOL_VERSION = crypto.Keccak256Hash([]byte("1"))
 )
 

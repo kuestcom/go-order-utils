@@ -7,7 +7,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/polymarket/go-order-utils/pkg/model"
+	"github.com/kuestcom/go-order-utils/pkg/model"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -419,7 +419,7 @@ func TestBuildSignedOrder2(t *testing.T) {
 		FeeRateBps:    "100",
 		Nonce:         "0",
 		Expiration:    "0",
-		SignatureType: model.POLY_GNOSIS_SAFE,
+		SignatureType: model.KUEST_GNOSIS_SAFE,
 	}, model.NegRiskCTFExchange)
 	assert.NoError(t, err)
 	assert.NotNil(t, signedOrder)
